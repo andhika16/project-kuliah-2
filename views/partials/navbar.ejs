@@ -16,21 +16,30 @@
                     <!-- TODO:membuat navbar link saat diclick menjadi fokus pada salah satu page -->
                     <div class="hidden md:w-full md:flex items-center justify-around antialiased">
                         <!-- FIXME:tinggal merubah bberapa bagian menjadi dropdown -->
-                        <div class="h-full hover:bg-gray-300  px-5 flex items-center transition duration-300 ">
+                        <div class="h-full hover:bg-indigo-600  px-5 flex items-center transition duration-300 ">
                             <a href="/" class=" text-white  text-md ">Beranda</a>
                         </div>
-                        <div class="h-full hover:bg-gray-300  px-5 flex items-center transition duration-300 ">
-                            <a href="/profil" class=" text-white  text-md ">Profil Desa</a>
+                        <div class="relative group h-full hover:bg-indigo-600 py-4 px-2 flex items-center transition duration-300 ">
+                          <button class="md:w-auto md:inline md:mt-0 focus:outline-none  text-white">
+                            <span >Profil Desa</span>
+                            <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                          </button>
+                          <div class="absolute top-14 right-0 w-60 z-10 hidden group-hover:block">
+                            <div class="py-3 px-5 bg-white shadow-lg">
+                              <div class="grid grid-cols-1 gap-4 ">
+                                <a href="/profil-geografis" class="hover:bg-gray-200 p-2 text-md ">Geografis</a> 
+                                <a href="/profil-sejarah" class="hover:bg-gray-200 p-2 text-md ">Sejarah</a> 
+                                <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Perangkat Desa</a> 
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <div class="h-full hover:bg-gray-300  px-5 flex items-center transition duration-300 ">
+                        <div class="h-full hover:bg-indigo-600  px-5 flex items-center transition duration-300 ">
                             <a href="/berita" class=" text-white  text-md ">Kabar Desa</a>
                         </div>
-                        <div class="h-full hover:bg-gray-300  px-5 flex items-center transition duration-300 ">
-                            <a href="/layanan" class=" text-white  text-md ">Layanan Publik</a> 
-                        </div>
-                        <div class="relative group h-full hover:bg-gray-300 py-4 px-2 flex items-center transition duration-300 ">
+                        <div class="relative group h-full hover:bg-indigo-600 py-4 px-2 flex items-center transition duration-300 ">
                             <button class="md:w-auto md:inline md:mt-0 focus:outline-none  text-white">
-                              <span >Pemerintah Desa</span>
+                              <span >Layanan Publik</span>
                               <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                             </button>
                             <div class="absolute top-14 right-0 w-60 z-10 hidden group-hover:block">
@@ -39,29 +48,21 @@
                                   <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
                                   <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
                                   <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
-                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
-                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
-                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
-                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
                                 </div>
                               </div>
                             </div>
                           </div>
-                        <div class="relative group h-full hover:bg-gray-300 py-4 px-2 flex items-center transition duration-300 ">
-                            <button class="md:w-auto md:inline md:mt-0 focus:outline-none  ">
+                        <div class="relative group h-full hover:bg-indigo-600 py-4 px-2 flex items-center transition duration-300 ">
+                            <button class="md:w-auto md:inline md:mt-0 focus:outline-none  text-white">
                               <span >Pemerintah Desa</span>
                               <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                             </button>
                             <div class="absolute top-14 right-0 w-60 z-10 hidden  bg-grey-200 group-hover:block">
                               <div class="py-3 px-5 bg-white shadow-lg">
                                 <div class="grid grid-cols-1 gap-4 ">
-                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
-                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
-                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
-                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
-                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
-                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
-                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
+                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">PDP TAHUN 2019</a> 
+                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">PDP TAHUN 2020</a> 
+                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">PDP TAHUN 2021</a> 
                                 </div>
                               </div>
                             </div>

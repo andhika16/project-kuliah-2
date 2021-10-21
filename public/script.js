@@ -2,11 +2,11 @@ $(document).ready(function(){
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();
         if (scroll > 0) {
-            $("nav").addClass("md:bg-gradient-to-r from-green-500 to-green-700");  	
+            $("nav").addClass("md:bg-gradient-to-r from-indigo-800 to-indigo-500");  	
             $("nav").removeClass("md:opacity-100");  	
         }
         else {
-            $("nav").removeClass("md:bg-gradient-to-r from-green-500 to-green-700");  	
+            $("nav").removeClass("md:bg-gradient-to-r from-indigo-800 to-indigo-500");  	
             $("nav").addClass("md:opacity-100");
         }
     })
