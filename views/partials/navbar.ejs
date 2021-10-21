@@ -1,0 +1,130 @@
+<div class="md:fixed w-full "> 
+    <!-- FIXME: buat navbar menjadi transparan saat on top -->
+    <nav  class="">  <!-- TODO:coba navbar dibuat gradient -->
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="md:ml-12">
+                    <!-- Website Logo -->
+                    <a href="/" class="flex items-center">
+                        <span class="w-14">
+                            <img class="w-full h-full" src="/img/tatung-logo.png" alt="">
+                        </span>
+                        <h1 class="text-md text-white m-2" >DESA TATUNG</h1>
+                    </a>
+                </div>
+                <div class="flex navbar-button">
+                    <!-- TODO:membuat navbar link saat diclick menjadi fokus pada salah satu page -->
+                    <div class="hidden md:w-full md:flex items-center justify-around antialiased">
+                        <!-- FIXME:tinggal merubah bberapa bagian menjadi dropdown -->
+                        <div class="h-full hover:bg-gray-300  px-5 flex items-center transition duration-300 ">
+                            <a href="/" class=" text-white  text-md ">Beranda</a>
+                        </div>
+                        <div class="h-full hover:bg-gray-300  px-5 flex items-center transition duration-300 ">
+                            <a href="/profil" class=" text-white  text-md ">Profil Desa</a>
+                        </div>
+                        <div class="h-full hover:bg-gray-300  px-5 flex items-center transition duration-300 ">
+                            <a href="/berita" class=" text-white  text-md ">Kabar Desa</a>
+                        </div>
+                        <div class="h-full hover:bg-gray-300  px-5 flex items-center transition duration-300 ">
+                            <a href="/layanan" class=" text-white  text-md ">Layanan Publik</a> 
+                        </div>
+                        <div class="relative group h-full hover:bg-gray-300 py-4 px-2 flex items-center transition duration-300 ">
+                            <button class="md:w-auto md:inline md:mt-0 focus:outline-none  text-white">
+                              <span >Pemerintah Desa</span>
+                              <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                            <div class="absolute top-14 right-0 w-60 z-10 hidden group-hover:block">
+                              <div class="py-3 px-5 bg-white shadow-lg">
+                                <div class="grid grid-cols-1 gap-4 ">
+                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
+                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
+                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
+                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
+                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
+                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
+                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <div class="relative group h-full hover:bg-gray-300 py-4 px-2 flex items-center transition duration-300 ">
+                            <button class="md:w-auto md:inline md:mt-0 focus:outline-none  ">
+                              <span >Pemerintah Desa</span>
+                              <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                            <div class="absolute top-14 right-0 w-60 z-10 hidden  bg-grey-200 group-hover:block">
+                              <div class="py-3 px-5 bg-white shadow-lg">
+                                <div class="grid grid-cols-1 gap-4 ">
+                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
+                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
+                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
+                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
+                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
+                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
+                                  <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                    <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+                        x-show="!showMenu"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu">
+            <ul class="">
+                <li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Beranda</a></li>
+                <li><a href="/profil" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Profil Desa</a></li>
+                <li><a href="/berita" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Kabar Desa</a></li>
+                <li><a href="/layanan" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Layanan Publik</a></li>
+                <div class="relative group block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">
+                    <button class="mt-2">
+                      <span>First Dropdown</span>
+                    </button>
+                    <div class="absolute z-10 hidden bg-grey-200 group-hover:block">
+                      <div class="p-5 mt-2 bg-white shadow-lg">
+                        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                          <p>dropdown content here</p>
+                          <p>dropdown content here</p>
+                          <p>dropdown content here</p>
+                          <p>dropdown content here</p>
+                          <p>dropdown content here</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <div class="relative group block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">
+                    <button class="flex flex-row items-center mt-2">
+                      <span>Second Dropdown</span>
+                    </button>
+                    <div class="absolute z-10 hidden bg-grey-200 group-hover:block">
+                        <div class="p-5 mt-2  bg-white shadow-lg">
+                        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                          <p>dropdown content here</p>
+                          <p>dropdown content here</p>
+                          <p>dropdown content here</p>
+                          <p>dropdown content here</p>
+                          <p>dropdown content here</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </ul>
+        </div>
+</div>

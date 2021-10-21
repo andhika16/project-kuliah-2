@@ -1,0 +1,40 @@
+{
+  "name": "tatung",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "build-css": "tailwindcss -i ./public/src/stlyes.css -o ./public/styles.css",
+    "watch-css": "tailwindcss -o public/styles.css --watch",
+    "start": "nodemon app.js",
+    "json:server": "json-server --watch db.json --port 8000"
+  },
+  "keywords": [
+    "json-server,heroku, node, REST API"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.3.5",
+    "nodemon": "^2.0.13",
+    "postcss": "^8.3.7",
+    "tailwindcss": "^2.2.15"
+  },
+  "dependencies": {
+    "cross-fetch": "^3.1.4",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "hbs": "^4.1.2",
+    "json-server": "^0.17.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andhika16/tatung.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andhika16/tatung/issues"
+  },
+  "homepage": "https://github.com/andhika16/tatung#readme",
+  "description": ""
+}

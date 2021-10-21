@@ -1,0 +1,17 @@
+
+<section class="p-8" >
+    <!-- <div class="my-10 max-w-lg text-left px-10 md:p-0">
+        <h1 class="text-3xl font-bold">Informasi Pelayanan Desa Tatung</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ducimus earum dolores consequuntur quam iusto culpa odio nesciunt veniam sint?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, numquam!
+        </p>
+    </div> -->
+
+    <div class="grid grid-cols-2 gap-3 md:grid-cols-4 md:p-0">
+        <% layanan.forEach(e => { %>
+            <a class="flex flex-col items-center md:max-w-xs p-5 m-1 text-center shadow" href="/layanan/<%= e.id %>">
+                <h1 class="text-lg font-bold"> <%= e.judul  %> </h1>
+            </a>
+        <% }) %> 
+    </div>
+</section>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <!-- font style goes here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Inter&family=Lato&family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
+<!-- end font styles -->
+        <title><%= title %> </title>
+</head>
+<body >
+        <%- include('partials/navbar')  %>    
+<!-- fungsi ini mengatur aga navbar transparent hanya di halaman beranda -->
+        <% if(title === "Pemdes tatung") {%>
+                <span></span>
+        <% }else { %>  
+        
+        <div class="bg-gradient-to-r from-green-500 to-green-800 md:p-5 mx-auto">
+                <div class="md:mt-10 border-t border-white p-5 text-center md:text-left">
+                         <h1 class="text-white text-xl"><%= subTitle %></h1>
+                </div>
+        </div>
+        <% } %> 
+<!-- end -->
+        <div class="container mx-auto md:max-w-7xl mb-60   text-center md:text-left ">
+                <%- body %> 
+        </div>
+
+        <%- include('partials/footer') %> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/script.js"></script>
+
+</body>
+</html>

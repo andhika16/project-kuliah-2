@@ -1,0 +1,41 @@
+<section class="md:flex md:justify-center px-8 md:pb-96 md:pt-20  max-w-full">
+    
+    
+
+    <div class="md:mx-0 md:flex md:flex-wrap md:max-w-4xl md:justify-center">
+                <% berita.forEach(e => { %>
+                    <div class="overflow-hidden md:m-2 mt-10 md:mt-0 mb-5 md:w-60">
+                        <a href="#">
+                        <div class="flex-col">
+                            <div class="md:flex-shrink-0">
+                                <img class="h-48 w-full object-cover md:h-56 md:w-full" src="<%= e.gambar %>"  alt="Man looking at item at a store">
+                            </div>
+                            <div class="py-5">
+                                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold border-l-lg border-green"> <%= e.tanggal %> </div>
+                                <a href="/berita/<%= e.id %>" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline"><%= e.judul %></a>
+                                <p class="hidden md:block mt-2 text-sm text-gray-500"><%= e.subJudul %></p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                <% }) %> 
+            </div>
+            <div class="md:mx-4 md:max-w-xs">
+                <div class="bg-green-500 text-left shadow p-2">
+                    <h1 class="text-white font-bold" >Berita Lainya</h1>
+                </div>
+                <div class="text-black text-left divide-y divide-black" >
+                    <% berita.forEach(e => { %> 
+                    <div class="my-3  py-2">
+                        <span>
+                            <h1 class="text-lg font-bold my-2 border-green-500 border-l-4 px-2">12 SEPTEMBER 2021</h1>
+
+                            <a href="/berita/<%= e.id %>" class="text-black text-sm hover:text-gray-900">
+                                <%= e.judul %> 
+                            </a>
+                        </span>
+                    </div>
+                    <% }) %> 
+                </div>
+</section>
+

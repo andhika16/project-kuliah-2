@@ -1,0 +1,108 @@
+{
+  "berita" : [
+    {
+        
+        "id" : 1,        
+        "gambar":"/img/berita/desa.tatung_1___B8VDOGDgJmK___.jpg",
+        "tanggal":"9 FEBRUARI 2020",
+        "judul": "Pembangunan Batas Sungai Desa Tatung",
+        "subJudul":"Gotong royong sandaran bekerja Masyarakat dukuh tatung lor",
+        "isi" : "Gotong royong sandaran bekerja Masyarakat dukuh tatung lor bekerja bakti penggalian pipa Pamsimas"
+    },
+    {
+        "id" : 2,
+        "gambar":"/img/berita/desa.tatung_2___CDiLYHHAELS___.jpg",
+        "tanggal":"6 Agustus 2020",
+        "judul": "Penutupan Kegiatan KKN",
+        "subJudul":"Kegiatan kkn dalam rangka pengembangan parawisata",
+        "isi" : "Kegiatan kkn dalam rangka pengembangan parawisata paralayang desa tatung."
+    },
+    {
+        "id" : 3,
+        "gambar":"/img/berita/desa.tatung___B0xELpWByX7___.jpg",
+        "tanggal":"5 AGUSTUS 2019",
+        "judul": "Peresmian PARALAYANG LIGA JATIM SERI 2" ,
+        "subJudul":"Pemerintah Desa Tatung mengucapkan selamat kepada Panitia PARALAYANG LIGA JATIM SERI 2",
+        "isi" : "Pemerintah Desa Tatung mengucapkan selamat kepada Panitia PARALAYANG LIGA JATIM SERI 2 yaitu Karang Taruna Desa Tatung 'Taruna Hebat' telah berhasil dan sukses menyelenggarakan event Liga Paralayang Jawa Timur."
+    },
+    {
+        "id" : 4,
+        "gambar":"/img/berita/desa.tatung___B0xELpWByX7___.jpg",
+        "tanggal":"5 AGUSTUS 2019",
+        "judul": "Peresmian PARALAYANG LIGA JATIM SERI 2" ,
+        "subJudul":"Pemerintah Desa Tatung mengucapkan selamat kepada Panitia PARALAYANG LIGA JATIM SERI 2",
+        "isi" : "Pemerintah Desa Tatung mengucapkan selamat kepada Panitia PARALAYANG LIGA JATIM SERI 2 yaitu Karang Taruna Desa Tatung 'Taruna Hebat' telah berhasil dan sukses menyelenggarakan event Liga Paralayang Jawa Timur."
+    },
+    {
+        "id" : 5,
+        "gambar":"/img/berita/WhatsApp-Image-2019-08-05-at-13.14.27.jpeg",
+        "tanggal":"5 AGUSTUS 2019",
+        "judul": "Desa Tatung Miliki Potensi Luar Biasa Di Olahraga Paralayang" ,
+        "subJudul":"Paska Liga Paralayang Seri 2 Jawa Timur , Federasi Aerosport Seluruh Indonesi (FASI) berencana menggelar event Nasional di Desa Tatung Kecamatan Balong",
+        "isi" : "Paska Liga Paralayang Seri 2 Jawa Timur , Federasi Aerosport Seluruh Indonesi (FASI) berencana menggelar event Nasional di Desa Tatung Kecamatan Balong. Hal ini karena melihat beberapa faktor di Desa Tatung ini sangat mungkin untuk menggelar event bertaraf Nasional maupun Internasional.Ketua Paralayang Provinsi Jawa Timur, Arif Eko Wahyudi, mengatakan pihaknya akan merencanakan event bertaraf Nasional di Desa Tatung, karena melihat potensi desa Tatung yang sangat luar biasa di olahraga paralayang. Mengingat Desa Tatung memiliki Gunung Gede yang keindahannya nomor 2 di dunia untuk olah raga paralayang."
+    },
+    {
+        "id" : 6,
+        "gambar":"/img/berita/cerita-1-1170x550.jpg",
+        "tanggal":"5 AGUSTUS 2019",
+        "judul": "Harta Tersembunyi Bukit Gede Tatung" ,
+        "subJudul":"Balong – bukit dengan ketingian …… mdpl dan luas sekitar ….. memang nampak biasa jika dilihat dari bawah, jika Bukit Gede ini digalipun yang ada hanya tanah dan bebatuan",
+        "isi" : "Balong – bukit dengan ketingian …… mdpl dan luas sekitar ….. memang nampak biasa jika dilihat dari bawah, jika Bukit Gede ini digalipun yang ada hanya tanah dan bebatuan, namun Bukit Gede Tatung ini menjadi harta karun khususnya bagi masyarakat desa Tatung sendiri. Pasalnya bagai mendapat rejeki nomplok desa Tatung yang awalnya dikenal sebagai desa dengan komoditas tembakau dan bengkoang terbaik ini mendapatkan teman pelengkap. Bukit Gede ternyata mempunyai potensi wisata yang sangat cocok digunakan untuk olahraga paralayang. Karena bukit ini berdiri sendiri dan dikelilingi ladang persawahan sangat sesuai jika nantinya atlit paralayang yang berlaga disini tidak terlalu jauh saat akan transit."
+    }
+  ],
+  "layanan": [
+      { 
+          "id" : 1, 
+          "icon":"/img/icons/family-room.png",
+          "judul":"Layanan Kartu Keluarga",
+          "body":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?"
+      },
+      {
+          "id" : 2, 
+          "icon":"/img/icons/id-card.png",
+          "judul":"Layanan KTP",
+          "body":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?"
+      },
+      { 
+          "id" : 3, 
+          "icon":"/img/icons/certificate.png",
+          "judul":"Layanan Sertifikat Tanah",
+          "body":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?"
+      },
+      { 
+          "id" : 4, 
+          "icon":"/img/icons/contract.png",
+          "judul":"Layanan Hak Kepemilikan",
+          "body":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?"
+      },
+      { 
+          "id" : 5, 
+          "icon":"/img/icons/house.png",
+          "judul":"Layanan Surat Pindah",
+          "body":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?"
+      },
+      { 
+          "id" : 6, 
+          "icon":"/img/icons/document.png",
+          "judul":"Layanan Akta Kelahiran",
+          "body":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?"
+      },
+      { 
+          "id" : 7, 
+          "icon":"/img/icons/bank.png",
+          "judul":"Layanan Pemerintah Desa",
+          "body":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?"
+      },
+      { 
+          "id" : 8, 
+          "icon":"/img/icons/agreement.png",
+          "judul":"Layanan Bantuan Surat Desa",
+          "body":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?"
+      }
+    ]
+  
+}
+
+
+
+ 
