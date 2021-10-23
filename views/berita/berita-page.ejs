@@ -1,17 +1,60 @@
-<section>
+<section class="mx-2">
 
-    <div class="flex justify-center bg-gray-100" >
-        <div class="py-10 md:max-w-3xl flex md:flex-col items-center justify-center">
-            <div class="my-10">
-            <h1 class="font-bold text-3xl"><%= berita.judul %> </h1>
+    <div class="md:flex justify-center pt-10 md:pt-60">
+        <div class=" md:max-w-3xl md:flex flex-col items-center justify-center flex-1">
+            <div class="mb-10">
+                <h1 class="font-bold text-3xl text-left">
+                    <%= berita.judul %>
+                </h1>
+            </div>
+            <div class="w-full mb-5 md:mb-20">
+                <img class="w-full h-full" src="<%= berita.gambar %> " alt="">
+            </div>
+            <div class="mb-10">
+                <p class="text-md  font-thin text-left pb-10 border-b-2">
+                    <%= berita.isi %>
+                </p>
+                
+            </div>
+            <div class="flex justify-start w-full mb-5 m-1">
+                <div class="w-6 mr-4"><img class="w-full" src="/icon/facebook.png" alt=""></div>
+                <div class="w-6 mr-4"><img class="w-full" src="/icon/instagram.png" alt=""></div>
+                <div class="w-6 mr-4"><img class="w-full" src="/icon/twitter.png" alt=""></div>
+                <div class="w-6 mr-4"><img class="w-full" src="/icon/whatsapp.png" alt=""></div>
+            </div>
+
+            <div class="p-0">
+                <!-- <div class="grid grid-cols-3 gap-3 text-sm bg-black"> -->
+                <div class="flex justify-start flex-wrap">
+                    <div class="p-1 m-1 text-white bg-indigo-400">Lorem  dolor</div>
+                    <div class="p-1 m-1 text-white bg-indigo-400"> ipsum dolor</div>
+                    <div class="p-1 m-1 text-white bg-indigo-400">Lorem  dolor</div>
+                    <div class="p-1 m-1 text-white bg-indigo-400">Lorem ipsum dolor</div>
+                    <div class="p-1 m-1 text-white bg-indigo-400">Lorem ipsum </div>
+                    <div class="p-1 m-1 text-white bg-indigo-400"> ipsum dolor</div>
+                    <div class="p-1 m-1 text-white bg-indigo-400"> ipsum dolor</div>
+                </div>
+            </div>
         </div>
-        <div class="w-full mb-20">
-            <img class="w-full h-full"  src="<%= berita.gambar %> " alt="">
+        <div class="md:mx-6 md:w-80 mt-16 md:mt-0">
+            <div class="text-left shadow p-2 rounded bg-green-800">
+                <h1 class="font-bold text-white">Terbaru</h1>
+            </div>
+            <div class="text-black text-left divide-y divide-black">
+                <% beritaSisipan.forEach(e=> { %>
+                    <div class="my-3 py-2">
+                        <span>
+                            <h1 class="text-xs font-bold my-2 ">12 SEPTEMBER
+                                2021</h1>
+
+                            <a href="/berita/<%= e.id %>"
+                                class="text-black text-md px-2 hover:text-gray-400 border-l-2 border-black">
+                                <%= e.judul %>
+                            </a>
+                        </span>
+                    </div>
+                    <% }) %>
+            </div>
         </div>
-        <div>
-            <p class="text-md text-justify"><%= berita.isi %> </p>
-        </div>
-    </div>
-</div>
 
 </section>

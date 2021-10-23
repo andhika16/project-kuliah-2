@@ -4,7 +4,9 @@ module.exports = {
   theme: {
     fontFamily: {
       // 'sans': ['"IBM Plex Sans"', 'sans-serif'],
-      'sans': ['"Nunito Sans"', 'sans-serif']
+      'sans': ['"Nunito Sans"', 'sans-serif'],
+      'logo': [ '"Kite One"', 'sans-serif'],
+      
       // 'sans' : ['"Inter"','sans-serif']
     },
     backgroundColor: theme => ({

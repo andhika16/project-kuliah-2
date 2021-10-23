@@ -1,99 +1,120 @@
- 
-        
-<section class="bg-center md:p-0 flex flex-col items-center h-1/2 md:-mx-10    " 
-    style="background-image:url('/img/banner.jpg') ;" > <!-- FIXME:background image banner belum full otomatis -->
-        <div class="max-w-xl md:max-w-6xl px-5 ">
-            <div class="flex flex-col justify-center items-center h-96 md:h-96 md:p-0 " >
-                <div class="container text-white pt-20 ">
-                    <h1 class="text-4xl md:font-bold ">Sistem Informasi Pemerintah Desa Tatung</h1>
-                    <p class="mt-5 text-justify"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores repellat voluptates ea pariatur beatae fugiat qui laboriosam at corporis eius ipsam voluptatum inventore eaque dolores vel, velit, optio eveniet officia tempora, quia culpa. Maxime debitis porro animi? Enim esse iste sed nesciunt harum, sunt necessitatibus iure incidunt vero sint sequi!<strong>#umpoponorogojaya</strong></p>
+<div class="md:max-w-6xl mx-auto pt-10 md:py-20 px-5">
+
+
+    <section class="bg-cover md:bg-center md:p-0 flex flex-col items-center mb-20 rounded-xl  md:mx-0"
+        style="background-image:url('/img/banner.jpg') ;">
+        <!-- FIXME:background image banner belum full otomatis -->
+        <div class="max-w-xl md:max-w-6xl px-3">
+            <div class="flex flex-col justify-center items-center md:p-0">
+                <div class="container text-white py-10 md:p-20 ">
+                    <h1 class="text-2xl md:font-bold uppercase">Sistem Informasi Pemerintah Desa Ponorogo</h1>
+                    <p class="md:text-sm  text-justify"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores
+                        repellat voluptates ea pariatur beatae fugiat qui laboriosam at corporis eius ipsam voluptatum
+                        inventore eaque dolores vel, velit, optio eveniet officia tempora, quia culpa. Maxime debitis
+                        porro animi? Enim esse iste sed nesciunt harum, sunt necessitatibus iure incidunt vero sint
+                        sequi!<strong>#umpoponorogojaya</strong></p>
                 </div>
-            </div>
-        </div>
-</section>
-    
-
-
-<div class="md:max-w-6xl mx-auto p-5 mt-63 md:mt-16">
-<!-- Berita -->
-    <section class=" text-left">
-        <div class="max-w-full max-h-full px-5 md:p-0">
-            <div class="max-w-lg">
-                <h1 class="text-3xl font-bold">Informasi Seputar Berita Desa Tatung</h1>
-                <p class="my-8 text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam enim adipisci quia provident atque quae quisquam eos, ea sapiente exercitationem?</p>
-            </div>
-            <!-- Berita -->
-            <div class="md:flex ">   
-                <div class="flex-1 max-h-4xl overflow-x-hidden flex-grow">
-            <% berita.forEach(e => { %>
-                <div class="bg-white overflow-hidden mb-5 ">
-                    <a href="/berita/ <%= e.id %>">
-                        <div class="md:flex">
-                        <div class="md:w-60 md:h-">
-                            <img class="h-48 w-full object-cover md:h-full md:w-full" src="<%= e.gambar %>"  alt="">
-                        </div>
-                        <div class="py-5 md:px-8">
-                            <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold"> <%= e.tanggal %> </div>
-                            <a href="/berita/<%= e.id %>" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline"><%= e.judul %></a>
-                                <p class="text-gray-500 text-sm" ><%= e.subJudul %></p>
-                        </div>
-                        </div>
-                    </a>
-                </div>
-                <% }) %> 
-            </div>
-
-            <!-- TODO:membuat pagination untuk berita -->
-
-            <div class="md:mx-4  flex-shrink md:w-80">
-                <div class="bg-indigo-500 text-left shadow p-2">
-                    <h1 class="text-white font-bold" >Web Update</h1>
-                </div>
-                <div class="text-black text-left divide-y divide-black" >
-                    <% berita.forEach(e => { %> 
-                    <div class="my-3  py-2">
-                        <span>
-                            <h1 class="text-lg font-bold my-2 border-indigo-500 border-l-4 px-2">12 SEPTEMBER 2021</h1>
-
-                            <a href="/berita/<%= e.id %>" class="text-black text-sm hover:text-gray-900">
-                                <%= e.judul %> 
-                            </a>
-                        </span>
-                    </div>
-                    <% }) %> 
-                    
-                </div>
-            </div>
             </div>
         </div>
     </section>
 
 
-    <section class="mt-16 flex flex-col justify-center" >
+    <!-- Berita -->
+    <section class="text-left">
+        <div class="max-w-full max-h-full md:p-0">
+            <div class="max-w-lg">
+                <h1 class="text-3xl font-bold">Informasi Seputar Berita Desa Ponorogo</h1>
+                <p class="my-8 text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam enim
+                    adipisci quia provident atque quae quisquam eos, ea sapiente exercitationem?</p>
+            </div>
+            <!-- Berita -->
+            <div class="md:flex">
+                <div class="flex-1 md:pr-6 overflow-x-hidden flex-grow">
+                    <% berita.forEach(e=> { %>
+                        <div class="rounded md:shadow-md overflow-hidden mb-5">
+                            <a href="/berita/<%= e.id %>">
+                                <div class="md:flex">
+                                    <div class="md:w-60 md:h-48">
+                                        <img class="h-48 w-full object-cover md:h-full md:w-full" src="<%= e.gambar %>"
+                                            alt="">
+                                    </div>
+                                    <div class="py-5 md:px-8">
+                                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+                                            <%= e.tanggal %>
+                                        </div>
+                                        <a href="/berita/<%= e.id %>"
+                                            class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">
+                                            <%= e.judul %>
+                                        </a>
+                                        <p class="text-gray-500 text-sm">
+                                            <%= e.subJudul %>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <% }) %>
+                </div>
+
+                <!-- TODO:membuat pagination untuk berita -->
+
+                <div class="md:mx-2  flex-shrink md:max-w-lg">
+                    <div class="text-left shadow p-2 rounded bg-green-800">
+                        <h1 class="font-bold text-white">Terbaru</h1>
+                    </div>
+                    <div class="text-black text-left divide-y divide-black">
+                        <% berita.forEach(e=> { %>
+                            <div class="my-3 py-2 ">
+                                <span>
+                                    <h1 class="text-xs font-bold my-2 ">12 SEPTEMBER
+                                        2021</h1>
+
+                                    <a href="/berita/<%= e.id %>" class="text-black text-md px-2 hover:text-gray-400 border-l-2 border-black">
+                                        <%= e.judul %>
+                                    </a>
+                                </span>
+                            </div>
+                            <% }) %>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="mt-16 flex flex-col justify-center">
         <div class="my-10 max-w-lg text-left text-justify">
-            <h1 class="text-3xl font-bold">Informasi Pelayanan Desa Tatung</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ducimus earum dolores consequuntur quam iusto culpa odio nesciunt veniam sint?
+            <h1 class="text-3xl font-bold">Informasi Pelayanan Desa Ponorogo</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ducimus earum dolores consequuntur quam
+                iusto culpa odio nesciunt veniam sint?
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, numquam!
             </p>
         </div>
 
         <div class="grid grid-cols-2 gap-3 md:grid-cols-4">
-            <% layanan.forEach(e => { %>
-                <a class="flex flex-col items-center md:max-w-xs p-5 m-1 text-center border  hover:shadow-lg" href="#">
-                        <span class="bg-indigo-200 p-5 w-20 rounded-full">
-                            <img src="<%= e.icon %>" alt="">
-                        </span>
-                        <span class="p-2">
-                            <h1 class="text-lg font-bold"> <%= e.judul  %> </h1>
-                            <p class="hidden md:block text-sm text-gray-500"><%= e.body %></p>
-                        </span>
+            <% layanan.forEach(e=> { %>
+                <a class="flex flex-col items-center md:max-w-xs p-2 md:p-5 m-1 text-center 
+                transition duration-300 ease-in-out transform hover:shadow-lg hover:-translate-y-1 hover:scale-100"
+                    href="#">
+                    <span class="p-5 w-20 rounded-full shadow-md">
+                        <img src="<%= e.icon %>" alt="">
+                    </span>
+                    <span class="p-2">
+                        <h1 class="text-lg font-bold">
+                            <%= e.judul %>
+                        </h1>
+                        <p class="hidden md:block text-sm text-gray-500">
+                            <%= e.body %>
+                        </p>
+                    </span>
                 </a>
-            <% }) %> 
+                <% }) %>
 
         </div>
         <div class="mt-10 mx-1 md:mx-0">
             <a href="/layanan">
-                <button class="bg-gray-200 p-2 w-full" type="button">Lihat menu lainya</button>
+                <button class="bg-green-800 p-2 w-full text-white" type="button">Lihat menu lainya</button>
             </a>
         </div>
     </section>
@@ -101,66 +122,90 @@
 
 
 
-<section class="flex-col justify-center md:mt-36 max-w-full">
-    <div class="my-10 max-w-lg text-left text-justify">
-        <h1 class="text-3xl font-bold mb-2">Hasil Pertanian Desa Tatung</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa officiis et ipsum quidem nesciunt aliquam Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laudantium esse laborum?</p>
-    </div>
-    
-    <div class="max-w-full">
-        
-        <div class="mb-2 my-5">
-            <div class="md:flex md:max-w-full md:h-60">
-                <div class="md:flex-shrink-0">
-                    <img class="h-48 w-full object-cover md:h-full md:w-48" src="/img/tembakau.jpg"  alt="Man looking at item at a store">
-                </div>  
-            <div class="p-5 md:px-5 md:py-0 text-left text-justify">
-                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">  </div>
-                <a href="#" class="text-lg leading-tight font-medium text-black hover:underline">Hasil tembakau</a>
-                <p class="mt-2 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, asperiores corporis rerum earum nobis voluptas. Soluta porro quidem odit dolor ut in dolorum fugit, expedita qui laudantium omnis commodi ex, veritatis aliquam, dolore facere atque dignissimos nulla nobis. Ipsa, pariatur fuga! Officia quisquam repellendus perspiciatis itaque voluptatem. Nihil, veritatis quaerat?</p>
-            </div>
-            </div>
-        </div>
-        <div class="mb-2 my-5">
-            <div class="md:flex md:max-w-full md:h-60">
-                <div class="pr-5 md:py-0 text-left text-justify">
-                    <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">  </div>
-                    <a href="#" class=" text-lg leading-tight font-medium text-black hover:underline">Hasil Jagung</a>
-                    <p class="mt-2 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, asperiores corporis rerum earum nobis voluptas. Soluta porro quidem odit dolor ut in dolorum fugit, expedita qui laudantium omnis commodi ex, veritatis aliquam, dolore facere atque dignissimos nulla nobis. Ipsa, pariatur fuga! Officia quisquam repellendus perspiciatis itaque voluptatem. Nihil, veritatis quaerat?</p>
-                </div>
-                <div class="md:flex-shrink-0">
-                    <img class="h-48 w-full object-cover md:h-full md:w-48" src="/img/jagung.jpg"  alt="Man looking at item at a store">
-                </div>
-            </div>
-        </div>
-        
-        <div class="mb-2 my-5">
-            <div class="md:flex md:max-w-full md:h-60">
-                <div class="md:flex-shrink-0">
-                    <img class="h-48 w-full object-cover md:h-full md:w-48" src="/img/padi.jpg"  alt="Man looking at item at a store">
-                </div>
-                <div class="p-5 md:px-5 md:py-0 text-left text-justify">
-                    <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">  </div>
-                    <a href="#" class=" text-lg leading-tight font-medium text-black hover:underline">Hasil Padi</a>
-                    <p class="mt-2 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, asperiores corporis rerum earum nobis voluptas. Soluta porro quidem odit dolor ut in dolorum fugit, expedita qui laudantium omnis commodi ex, veritatis aliquam, dolore facere atque dignissimos nulla nobis. Ipsa, pariatur fuga! Officia quisquam repellendus perspiciatis itaque voluptatem. Nihil, veritatis quaerat?</p>
-                </div>
-            </div>
-        </div>
-        <div class="mb-2 my-5">
-            <div class="md:flex md:max-w-full md:h-60">
-                <div class="pr-5 md:py-0 text-left text-justify">
-                    <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">  </div>
-                    <a href="#" class=" text-lg leading-tight font-medium text-black hover:underline">Hasil Bengkoang</a>
-                    <p class="mt-2 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, asperiores corporis rerum earum nobis voluptas. Soluta porro quidem odit dolor ut in dolorum fugit, expedita qui laudantium omnis commodi ex, veritatis aliquam, dolore facere atque dignissimos nulla nobis. Ipsa, pariatur fuga! Officia quisquam repellendus perspiciatis itaque voluptatem. Nihil, veritatis quaerat?</p>
-                </div>
-                <div class="md:flex-shrink-0">
-                    <img class="h-48 w-full object-cover md:h-full md:w-48" src="/img/bengkuang.jpg"  alt="Man looking at item at a store">
-                </div>
-            </div>
+    <section class="flex-col justify-center md:mt-36 max-w-full">
+        <div class="my-10 max-w-lg text-left text-justify">
+            <h1 class="text-3xl font-bold mb-2">Hasil Pertanian Desa Ponorogo</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa officiis et ipsum quidem nesciunt aliquam
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laudantium esse laborum?</p>
         </div>
 
-    </div>
-</section>
+        <div class="max-w-full divide-y divide-black">
+
+            <div class="py-8 ">
+                <div class="md:flex md:max-w-full md:h-60">
+                    <div class="md:flex-shrink-0">
+                        <img class="h-48 w-full object-cover md:h-full md:w-48" src="/img/tembakau.jpg"
+                            alt="Man looking at item at a store">
+                    </div>
+                    <div class="p-5 md:px-5 md:py-0 text-left text-justify md:flex md:flex-col md:justify-center">
+                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold"> </div>
+                        <a href="#" class="text-lg leading-tight font-medium text-black hover:underline">Hasil
+                            tembakau</a>
+                        <p class="mt-2 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+                            asperiores corporis rerum earum nobis voluptas. Soluta porro quidem odit dolor ut in dolorum
+                            fugit, expedita qui laudantium omnis commodi ex, veritatis aliquam, dolore facere atque
+                            dignissimos nulla nobis. Ipsa, pariatur fuga! Officia quisquam repellendus perspiciatis
+                            itaque voluptatem. Nihil, veritatis quaerat?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="py-8 ">
+                <div class="md:flex md:max-w-full md:h-60 ">
+                    <div class="md:flex-shrink-0 md:order-1">
+                        <img class="h-48 w-full object-cover md:h-full md:w-48" src="/img/jagung.jpg"
+                            alt="Man looking at item at a store">
+                    </div>
+                    <div class="p-5 md:px-5 md:py-0 text-left text-justify md:flex md:flex-col md:justify-center">
+                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold"> </div>
+                        <a href="#" class="text-lg leading-tight font-medium text-black hover:underline">Hasil
+                            jagung</a>
+                        <p class="mt-2 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+                            asperiores corporis rerum earum nobis voluptas. Soluta porro quidem odit dolor ut in dolorum
+                            fugit, expedita qui laudantium omnis commodi ex, veritatis aliquam, dolore facere atque
+                            dignissimos nulla nobis. Ipsa, pariatur fuga! Officia quisquam repellendus perspiciatis
+                            itaque voluptatem. Nihil, veritatis quaerat?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-8 ">
+                <div class="md:flex md:max-w-full md:h-60">
+                    <div class="md:flex-shrink-0">
+                        <img class="h-48 w-full object-cover md:h-full md:w-48" src="/img/padi.jpg"
+                            alt="Man looking at item at a store">
+                    </div>
+                    <div class="p-5 md:px-5 md:py-0 text-left text-justify md:flex md:flex-col md:justify-center">
+                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold"> </div>
+                        <a href="#" class=" text-lg leading-tight font-medium text-black hover:underline">Hasil Padi</a>
+                        <p class="mt-2 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+                            asperiores corporis rerum earum nobis voluptas. Soluta porro quidem odit dolor ut in dolorum
+                            fugit, expedita qui laudantium omnis commodi ex, veritatis aliquam, dolore facere atque
+                            dignissimos nulla nobis. Ipsa, pariatur fuga! Officia quisquam repellendus perspiciatis
+                            itaque voluptatem. Nihil, veritatis quaerat?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="py-8 ">
+                <div class="md:flex md:max-w-full md:h-60 ">
+                    <div class="md:flex-shrink-0 md:order-1">
+                        <img class="h-48 w-full object-cover md:h-full md:w-48" src="/img/bengkuang.jpg"
+                            alt="Man looking at item at a store">
+                    </div>
+                    <div class="p-5 md:px-5 md:py-0 text-left text-justify md:flex md:flex-col md:justify-center">
+                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold"> </div>
+                        <a href="#" class="text-lg leading-tight font-medium text-black hover:underline">Hasil
+                            Bengkoang</a>
+                        <p class="mt-2 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+                            asperiores corporis rerum earum nobis voluptas. Soluta porro quidem odit dolor ut in dolorum
+                            fugit, expedita qui laudantium omnis commodi ex, veritatis aliquam, dolore facere atque
+                            dignissimos nulla nobis. Ipsa, pariatur fuga! Officia quisquam repellendus perspiciatis
+                            itaque voluptatem. Nihil, veritatis quaerat?</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
 
 
