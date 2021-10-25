@@ -2,11 +2,6 @@ const route = require('express').Router();
 
 
 
-
-
-
-
-
 route.get('/profil-geografis', (req, res) => {
     
 

@@ -1,25 +1,32 @@
 const route = require('express').Router();
 const fetchData = require('../config/fetchData');
-
+const Berita = require('../model/berita');
+const { findById } = require('../model/layanan');
+const Layanan = require('../model/layanan');
 
 
 route.get('/', async (req, res) => {
 
-    const berita = await fetchData('berita').then(data => data)
-    const layanan = await fetchData('layanan').then(data => data)
+    try {
+     const berita = await Berita.find()
+     const layanan = await Layanan.find()
+        res.render('beranda', {
+            title: 'Pemdes Ponorogo',
+            berita,
+            layanan,
+        });  
 
-    res.render('beranda', {
-        title: 'Pemdes Ponorogo',
-        berita,
-        layanan,
-    });
+    } catch (error) {
+        console.log(error);
+    }
+   
 });
 
 
 route.get('/berita/:id', async (req, res) => {
     const id = req.params.id
-    const berita = await fetchData('berita', id).then(data => data)
-    const beritaSisipan = await fetchData('berita').then(data => data)
+    const berita = await Berita.findById(id)
+    const beritaSisipan = await Berita.find()
 
     res.render('berita/berita-page', {
         title: 'Berita Desa Ponorogo',
@@ -53,7 +60,7 @@ route.get('/layanan/:id', async (req, res) => {
 
 
 route.get('/berita', async (req, res) => {
-    const berita = await fetchData('berita').then(data => data)
+    const berita = await Berita.find()
 
     res.render('berita', {
         title: 'Kabar Desa',

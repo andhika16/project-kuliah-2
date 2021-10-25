@@ -20,14 +20,21 @@
     "tailwindcss": "^2.2.17"
   },
   "dependencies": {
+    "@admin-bro/express": "^3.1.0",
+    "@admin-bro/mongoose": "^1.1.0",
+    "admin-bro": "^4.0.1",
     "cross-fetch": "^3.1.4",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "nodemon": "^2.0.7",
     "express-ejs-layouts": "^2.5.1",
+    "express-formidable": "^1.2.0",
+    "express-session": "^1.17.2",
     "hbs": "^4.1.2",
-    "json-server": "^0.17.0"
+    "json-server": "^0.17.0",
+    "mongoose": "^6.0.12",
+    "nodemon": "^2.0.7",
+    "tslib": "^2.3.1"
   },
   "repository": {
     "type": "git",

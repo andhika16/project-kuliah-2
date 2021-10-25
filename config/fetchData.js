@@ -2,10 +2,17 @@ const fetch = require('cross-fetch');
 
 
 module.exports = async (resource, id = '') => { // ?  ini adalah fungsi mengambil data
-    const url = `https://pemdes-tatung-json.herokuapp.com/${resource}/${id}`
-    const data = await fetch(url)
-    const dataSource = await data.json()
-    return dataSource
+    try {
+        const url = `https://pemdes-tatung-json.herokuapp.com/${resource}/${id}`
+        const data = await fetch(url)
+        const dataSource = await data.json()
+        return dataSource
+        
+    } catch (error) {
+
+        console.log(error);
+        
+    }
 }
 
 
