@@ -86,6 +86,7 @@
           </div>
         </div>
         <!-- Mobile menu button -->
+        <!-- FIXME:pada saat tampila mobile menu dropdown tidak bisa diklik saat akan ditutup -->
         <div class="md:hidden flex items-center z-10">
           <button class="outline-none mobile-menu-button">
             <svg class=" w-6 h-6 text-black " x-show="!showMenu" fill="none" stroke-linecap="round"
@@ -105,8 +106,7 @@
         <div class="px-5 py-2 hover:bg-gray-100 rounded-md  flex items-center transition duration-300 ">
           <a href="/" class=" text-black  text-sm ">Kabar Desa</a>
         </div>
-        <div
-          class="relative group  hover:bg-gray-100 py-2 px-5 rounded-md flex items-center transition duration-300 ">
+        <div class="relative group  hover:bg-gray-100 py-2 px-5 rounded-md flex items-center transition duration-300 ">
           <button class="md:w-auto md:inline md:mt-0 focus:outline-none text-black text-sm">
             <span>Profil Desa</span>
             <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
@@ -126,8 +126,7 @@
             </div>
           </div>
         </div>
-        <div
-          class="relative group  hover:bg-gray-100 py-2 px-5 rounded-md flex items-center transition duration-300 ">
+        <div class="relative group  hover:bg-gray-100 py-2 px-5 rounded-md flex items-center transition duration-300 ">
           <button class="md:w-auto md:inline md:mt-0 focus:outline-none text-sm ">
             <span>Layanan Publik</span>
             <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
@@ -147,8 +146,7 @@
             </div>
           </div>
         </div>
-        <div
-          class="relative group  hover:bg-gray-100 py-2 px-5 rounded-md flex items-center transition duration-300 ">
+        <div class="relative group  hover:bg-gray-100 py-2 px-5 rounded-md flex items-center transition duration-300 ">
           <button class="md:w-auto md:inline md:mt-0 focus:outline-none  text-sm">
             <span>Pemerintah Desa</span>
             <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
