@@ -6,7 +6,10 @@ AdminBro.registerAdapter(AdminBroMongoose);
 
 const adminBro = new AdminBro({
 	resources: [
-		Layanan,
+		{
+			resource: Layanan,
+			options: { listProperties: ["icon", "judul", "body"] },
+		},
 		{
 			resource: Berita,
 			options: {
@@ -14,18 +17,15 @@ const adminBro = new AdminBro({
 					id: {
 						isVisible: {
 							list: false,
-							show: true,
-						},
-					},
-					isi: {
-						isVisible: {
-							type: "richtext",
+							show: false,
 						},
 					},
 				},
+				listProperties: ["tanggal", "judul", "subJudul", "isi"],
 			},
 		},
 	],
+	dashboard: {},
 	rootPath: "/admin",
 	branding: {
 		companyName: "Pemdes Tatung Admin",

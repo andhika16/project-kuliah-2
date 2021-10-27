@@ -13,5 +13,7 @@ route.get("/profil-sejarah", (req, res) => {
 		subTitle: "Asal-Usul Desa Ponorogo",
 	});
 });
-
+route.get("/perangkat-desa", (req, res) => {
+	res.render("profil/sejarah", {});
+});
 module.exports = route;

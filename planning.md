@@ -6,3 +6,6 @@
 * mengubah tampilan admin
 * mengamankan route
 * login sistem 
+* pengisian actual data pada layanan atau berita
+
+
