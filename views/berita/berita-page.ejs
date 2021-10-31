@@ -18,10 +18,8 @@
             <div class="w-full mb-5 md:mb-20">
                 <img class="w-full h-full" src="<%= berita.gambar %> " alt="">
             </div>
-            <div class="mb-10">
-                <p class="text-sm md:text-md text-justify text-left pb-10 border-b-2">
-                    <%= berita.isi %>
-                </p>
+            <div id="isi__berita" class="mb-10 text-sm md:text-md  text-left pb-10 border-b-2">
+                <%- articleBerita %>
 
             </div>
             <div class="flex justify-start w-full mb-5 m-1">
@@ -64,5 +62,4 @@
                     <% }) %>
             </div>
         </div>
-
 </section>

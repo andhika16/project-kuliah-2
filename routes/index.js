@@ -1,7 +1,6 @@
 const route = require("express").Router();
 const Berita = require("../model/berita");
 const Layanan = require("../model/layanan");
-
 // TODO:jika bisa refactor tiap-tiap route
 
 route.get("/", async (req, res) => {

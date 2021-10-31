@@ -7,5 +7,6 @@
 * mengamankan route
 * login sistem 
 * pengisian actual data pada layanan atau berita
+* membuat isi berita menjadi html string agar rapi
 
 
