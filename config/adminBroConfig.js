@@ -28,7 +28,7 @@ const adminBro = new AdminBro({
 						mimeType: "mimeType", // this property is important because allows to have previews
 					},
 					validation: {
-						mimeTypes: "images/jpg",
+						mimeTypes: "application/pdf",
 					},
 				}),
 			],
@@ -38,7 +38,6 @@ const adminBro = new AdminBro({
 	rootPath: "/admin",
 	branding: {
 		companyName: "Pemdes Tatung Admin",
-		softwareBrothers: false,
 	},
 });
 

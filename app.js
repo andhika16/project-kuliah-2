@@ -1,7 +1,7 @@
 "use strict";
 
 require("dotenv").config({ path: "./config/config.env" }); // ? peletakan dotenv harus paling atas
-
+const path = require("path");
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -27,7 +27,7 @@ app.set("view engine", "hbs");
 app.use(expresslayout);
 app.set("view engine", "ejs");
 // middleware
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(
 	express.urlencoded({
 		extended: true,
