@@ -1,0 +1,43 @@
+<section class="mx-2">
+
+    <div class="md:flex justify-center pt-5">
+        <div class=" md:max-w-3xl md:flex flex-col justify-start flex-1">
+            <div class="md:mb-20">
+                <a class="flex py-2 items-center" href="/article">
+                    <span class="w-4">
+                        <img src="/img/right.png" class="w-full" alt="">
+                    </span>
+                    <span class="mx-5 underline text-md">Kembali</span>
+                </a>
+            </div>
+            <div class="mb-10">
+                <h1 class="font-bold text-3xl text-left">
+                    <%= article.judul %>
+                </h1>
+            </div>
+            <div id="isi__article" class="mb-10 text-sm md:text-md  text-left pb-10 border-b-2">
+                <%- article.body %>
+
+            </div>
+            <div class="flex justify-start w-full mb-5 m-1">
+                <div class="w-6 mr-4"><img class="w-full" src="/icon/facebook.png" alt=""></div>
+                <div class="w-6 mr-4"><img class="w-full" src="/icon/instagram.png" alt=""></div>
+                <div class="w-6 mr-4"><img class="w-full" src="/icon/twitter.png" alt=""></div>
+                <div class="w-6 mr-4"><img class="w-full" src="/icon/whatsapp.png" alt=""></div>
+            </div>
+
+            <div class="p-0">
+                <!-- <div class="grid grid-cols-3 gap-3 text-sm bg-black"> -->
+                <div class="flex justify-start flex-wrap">
+                    <div class="p-1 m-1 text-white bg-indigo-400">Lorem dolor</div>
+                    <div class="p-1 m-1 text-white bg-indigo-400"> ipsum dolor</div>
+                    <div class="p-1 m-1 text-white bg-indigo-400">Lorem dolor</div>
+                    <div class="p-1 m-1 text-white bg-indigo-400">Lorem ipsum dolor</div>
+                    <div class="p-1 m-1 text-white bg-indigo-400">Lorem ipsum </div>
+                    <div class="p-1 m-1 text-white bg-indigo-400"> ipsum dolor</div>
+                    <div class="p-1 m-1 text-white bg-indigo-400"> ipsum dolor</div>
+                </div>
+            </div>
+        </div>
+
+</section>

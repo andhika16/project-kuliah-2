@@ -10,7 +10,6 @@ module.exports = {
 		replace({
 			preventAssignment: true,
 			"process.browser": true,
-			"process.env.NODE_ENV": JSON.stringify(mode),
 		}),
 	],
 };

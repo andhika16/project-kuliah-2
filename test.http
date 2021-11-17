@@ -7,7 +7,7 @@ Cache-Control: no-cache
 	"name": "smith"
 }
 ###
-GET https://pemdes-tatung-json.herokuapp.com/layanan HTTP/1.1
+GET https://pemdes-tatung-json.herokuapp.com/berita HTTP/1.1
 ###
 DELETE  https://pemdes-tatung-json.herokuapp.com/layanan/11 HTTP/1.1
 ###

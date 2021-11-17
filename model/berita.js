@@ -3,8 +3,16 @@ const { Schema } = require("mongoose");
 
 const beritaSchema = new mongoose.Schema(
 	{
+		uploadedFile: {
+			path: String,
+			type: String,
+			size: Number,
+			folder: String,
+			filename: String,
+		},
 		gambar: {
 			type: String,
+			required: false,
 		},
 		tanggal: {
 			type: String,
