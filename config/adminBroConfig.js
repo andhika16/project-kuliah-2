@@ -51,22 +51,22 @@ const adminBro = new AdminBro({
 				},
 			},
 			features: [
-				uploadFeature({
-					provider: {
-						local: {
-							bucket: path.resolve("config/uploads"),
-						},
-					},
-					properties: {
-						key: "uploadedFile.path",
-						bucket: "uploadedFile.folder",
-						mimeType: "uploadedFile.type",
-						size: "uploadedFile.size",
-						filename: "uploadedFile.filename",
-						file: "uploadFile",
-					},
-					// uploadPath: (record, filename) => `${record.id()}/${filename}`,
-				}),
+				// uploadFeature({
+				// 	provider: {
+				// 		local: {
+				// 			bucket: path.resolve("config/uploads"),
+				// 		},
+				// 	},
+				// 	properties: {
+				// 		key: "uploadedFile.path",
+				// 		bucket: "uploadedFile.folder",
+				// 		mimeType: "uploadedFile.type",
+				// 		size: "uploadedFile.size",
+				// 		filename: "uploadedFile.filename",
+				// 		file: "uploadFile",
+				// 	},
+				// 	// uploadPath: (record, filename) => `${record.id()}/${filename}`,
+				// }),
 			],
 		},
 	],

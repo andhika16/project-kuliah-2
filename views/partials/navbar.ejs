@@ -54,9 +54,13 @@
               <div class="absolute  top-10 right-0 w-60 z-10 hidden group-hover:block ">
                 <div class="py-3 px-5 bg-white shadow-lg rounded-md ">
                   <div class="grid grid-cols-1 gap-4 ">
-                    <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a>
-                    <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a>
-                    <a href="/layanan" class="hover:bg-gray-200 p-2 text-md ">Layanan Publik</a>
+				   <% layanan.forEach(e=> { %>
+						<a class="hover:bg-gray-200 p-2 text-md " href="layanan/layanan/<%= e.id %>">
+							<h1 class="text-sm font-bold">
+								<%= e.judul %>
+							</h1>
+						</a>
+					<% }) %>
                   </div>
                 </div>
               </div>
