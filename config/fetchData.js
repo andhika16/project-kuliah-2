@@ -1,13 +1,20 @@
 const fetch = require('cross-fetch');
 
-
-module.exports = async (resource, id = '') => { // ?  ini adalah fungsi mengambil data
-    const url = `https://pemdes-tatung-json.herokuapp.com/${resource}/${id}`
-    const data = await fetch(url)
-    const dataSource = await data.json()
-    return dataSource
-}
-
-
-// ** untuk memanggil fungsi diatas harus digunakan dalam fungsi yang memiliki async {const data = await fetchData}
-
+module.exports = async (resource, id = '') => {
+    try {
+        // Gunakan http:// bukan https://
+        const baseUrl = 'http://localhost:8000'; // Pastikan port sesuai (8000)
+        const url = id ? `${baseUrl}/${resource}/${id}` : `${baseUrl}/${resource}`;
+        
+        const response = await fetch(url);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        return await response.json();
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        throw error;
+    }
+};
