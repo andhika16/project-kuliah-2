@@ -1,51 +1,41 @@
-"use strict"
+"use strict";
 
-const dotenv = require('dotenv');
-const express = require('express');
+require("dotenv").config({ path: "./config/config.env" }); // ? peletakan dotenv harus paling atas
+const path = require("path");
+const express = require("express");
 const app = express();
-const path = require('path');
 const PORT = process.env.PORT || 3000;
+const dbConnect = require("./config/dbConnect");
+const expresslayout = require("express-ejs-layouts");
+const AdminBroExpress = require("@admin-bro/express");
+const adminBro = require("./config/adminBroConfig");
+const rollupConfig = require("./config/rollup.config");
+// * ------------------ ADMINBRO ----------------------
 
-const expresslayout = require('express-ejs-layouts');
-const jsonServer = require('json-server');
-const server = jsonServer.create();
-const router = jsonServer.router('db.json');
-const middlewares = jsonServer.defaults();
+const router = AdminBroExpress.buildRouter(adminBro);
+app.use(adminBro.options.rootPath, router);
+rollupConfig;
+// * ------------------ END ADMINBRO ----------------------
 
-server.use(middlewares);
-server.use(router);
-
-
+dbConnect(process.env.DB, "pemdes"); // * database connection
 
 app.listen(PORT, () => {
-    console.log(`server running port : ${PORT}`);
+	console.log(`Admin dan Server berjalan di port : ${PORT}`);
 });
 
-
-dotenv.config({
-    path: './config/config.env'
-})
 // layout
-app.set('view engine', 'hbs');
+app.set("view engine", "hbs");
 app.use(expresslayout);
-app.set('view engine', 'ejs');
+app.set("view engine", "ejs");
 // middleware
-app.use(express.static('public'));
-app.use(express.urlencoded({
-    extended:true
-}))
+app.use(express.static(path.join(__dirname, "public")));
+app.use(
+	express.urlencoded({
+		extended: true,
+	})
+);
 
-
-app.use('/', require('./routes/index'))
-app.use('/profil', require('./routes/profil'))
-
-
-
-
-
-
-
-
-
-
-
+app.use("/", require("./routes/index"));
+app.use("/berita", require("./routes/berita"));
+app.use("/profil", require("./routes/profil"));
+app.use("/article", require("./routes/article"));

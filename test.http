@@ -1,0 +1,33 @@
+
+POST https://pemdes-tatung-json.herokuapp.com/layanan HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+	"name": "smith"
+}
+###
+GET https://pemdes-tatung-json.herokuapp.com/berita HTTP/1.1
+###
+DELETE  https://pemdes-tatung-json.herokuapp.com/layanan/11 HTTP/1.1
+###
+POST https://pemdes-tatung-json.herokuapp.com/layanan HTTP/1.1
+Content-Type: application/json
+
+{
+    "icon": "/icon/icon",
+    "judul": "mantap",
+    "body": "mantap 2"
+}
+###
+
+POST https://pemdes-tatung-json.herokuapp.com/layanan HTTP/1.1
+Content-Type: application/json
+
+{
+    "icon": "/icon/icon",
+    "judul": "mantap",
+    "body": "<div> <h1> Lorem ipsum dolor sit</h1> amet consectetur adipisicing elit. Veritatis beatae aliquam maxime quia <br> illum ducimus eum delectus, iusto cumque quis </div>"
+}
+
+

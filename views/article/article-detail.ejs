@@ -1,24 +1,22 @@
 <section class="mx-2">
 
-    <div class="md:flex justify-center pt-5 md:pt-44">
+    <div class="md:flex justify-center pt-5">
         <div class=" md:max-w-3xl md:flex flex-col justify-start flex-1">
             <div class="md:mb-20">
-                <a class="flex py-2 items-center" href="/berita">
-                    <span class="w-5">
+                <a class="flex py-2 items-center" href="/article">
+                    <span class="w-4">
                         <img src="/img/right.png" class="w-full" alt="">
                     </span>
+                    <span class="mx-5 underline text-md">Kembali</span>
                 </a>
             </div>
             <div class="mb-10">
                 <h1 class="font-bold text-3xl text-left">
-                    <%= berita.judul %>
+                    <%= article.judul %>
                 </h1>
             </div>
-            <div class="w-full mb-5 md:mb-20">
-                <img class="w-full h-full" src="<%= berita.gambar %> " alt="">
-            </div>
-            <div id="isi__berita" class="mb-10 text-sm md:text-md  text-left pb-10 border-b-2">
-                <%- berita.isi %>
+            <div id="isi__article" class="mb-10 text-sm md:text-md  text-left pb-10 border-b-2">
+                <%- article.body %>
 
             </div>
             <div class="flex justify-start w-full mb-5 m-1">
@@ -41,24 +39,5 @@
                 </div>
             </div>
         </div>
-        <div class="md:mx-6 md:w-80 mt-16 md:mt-0">
-            <div class="text-left shadow p-2 rounded bg-green-800">
-                <h1 class="font-bold text-white">Terbaru</h1>
-            </div>
-            <div class="text-black text-left divide-y divide-black">
-                <% beritaSisipan.forEach(e=> { %>
-                    <div class="my-3 py-2">
-                        <span>
-                            <h1 class="text-xs font-bold my-2 ">12 SEPTEMBER
-                                2021</h1>
 
-                            <a href="/berita/<%= e.id %>"
-                                class="text-black text-md px-2 hover:text-gray-400 border-l-2 border-black">
-                                <%= e.judul %>
-                            </a>
-                        </span>
-                    </div>
-                    <% }) %>
-            </div>
-        </div>
 </section>

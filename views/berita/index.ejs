@@ -1,34 +1,36 @@
 <section class="md:flex flex-col md:justify-center items-center px-8 md:pb-96 md:pt-20 max-w-full">
-    <div class="my-20">
-        <span class="text-4xl"><%= subTitle %> </span>
-    </div>
-    <div class="md:mx-0 md:flex md:flex-wrap md:max-w-full md:justify-center ">
-        <% berita.forEach(e=> { %>
-            <div class="overflow-hidden md:m-2 md:mt-0 mb-5 md:w-60 shadow-lg hover:bg-gray-200 rounded md:w-80
+	<div class="my-20">
+		<span class="text-4xl">
+			<%= subTitle %>
+		</span>
+	</div>
+	<div class="md:mx-0 md:flex md:flex-wrap md:max-w-full md:justify-center ">
+		<% berita.forEach(e=> { %>
+			<div class="overflow-hidden md:m-2 md:mt-0 mb-5 md:w-60 shadow-lg hover:bg-gray-200 rounded md:w-80
             transition duration-300 ease-in-out transform hover:shadow-lg hover:-translate-y-1 hover:scale-100">
-                <a href="/berita/<%= e.id %>">
-                    <div class="flex-col">
-                        <div class="md:flex-shrink-0">
-                            <img class="h-48 w-full object-cover md:h-56 md:w-full" src="<%= e.gambar %>"
-                                alt="Man looking at item at a store">
-                        </div>
-                        <div class="p-5">
-                            <div
-                                class="uppercase tracking-wide text-sm text-indigo-500 font-semibold border-l-lg border-green">
-                                <%= e.tanggal %>
-                            </div>
-                            <a href="/berita/<%= e.id %>"
-                                class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">
-                                <%= e.judul %>
-                            </a>
-                            <p class="hidden md:block mt-2 text-sm text-gray-500">
-                                <%= e.subJudul %>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <% }) %>
-    </div>
-    
+				<a href="/berita/<%= e.id %>">
+					<div class="flex-col">
+						<div class="md:flex-shrink-0">
+							<img class="h-48 w-full object-cover md:h-56 md:w-full" src="<%= e.gambar %>"
+								alt="Man looking at item at a store">
+						</div>
+						<div class="p-5">
+							<div
+								class="uppercase tracking-wide text-sm text-indigo-500 font-semibold border-l-lg border-green">
+								<%= e.tanggal %>
+							</div>
+							<a href="/berita/<%= e.id %>"
+								class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">
+								<%= e.judul %>
+							</a>
+							<p class="hidden md:block mt-2 text-sm text-gray-500">
+								<%= e.subJudul %>
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<% }) %>
+	</div>
+
 </section>
